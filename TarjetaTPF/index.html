@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#003b70">
+
+<link rel="manifest" href="manifest.json">
+
+<title>TPF Card</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f6;
+    color: #172033;
+}
+
+.card {
+    width: 100%;
+    max-width: 460px;
+    min-height: 100vh;
+    margin: auto;
+    background: white;
+}
+
+.header {
+    background: #003b70;
+    padding: 24px;
+    text-align: center;
+}
+
+.logo {
+    width: 190px;
+    max-width: 70%;
+}
+
+.profile {
+    padding: 25px;
+    text-align: center;
+}
+
+.photo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,.20);
+}
+
+h1 {
+    margin: 16px 0 5px;
+    font-size: 24px;
+}
+
+.position {
+    color: #52606d;
+    margin-bottom: 4px;
+}
+
+.company {
+    font-weight: bold;
+    color: #003b70;
+}
+
+.contact {
+    margin-top: 25px;
+    text-align: left;
+    line-height: 1.8;
+    background: #f5f7fa;
+    padding: 16px;
+    border-radius: 14px;
+}
+
+.contact a {
+    color: #003b70;
+    text-decoration: none;
+}
+
+button,
+.button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary {
+    background: #003b70;
+    color: white;
+}
+
+.secondary {
+    background: #e8eef5;
+    color: #003b70;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.qr-section {
+    margin-top: 25px;
+}
+
+.qr {
+    width: 230px;
+    max-width: 80%;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #7b8794;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="header">
+        <img
+        src="logo_tpf.png"
+        class="logo"
+        alt="TPF Ingeniería">
+    </div>
+
+    <div class="profile">
+
+        <img
+        src="foto_claudia.jpg"
+        class="photo"
+        alt="Fotografía de contacto">
+
+        <h1>
+            Claudia Liliana Ramirez Gaitan
+        </h1>
+
+        <div class="position">
+            Gerente General
+        </div>
+
+        <div class="company">
+            TPF INGENIERÍA Colombia
+        </div>
+
+        <div class="contact">
+
+            📱
+            <a href="tel:+573180814500">
+            +57 318 081 4500
+            </a>
+
+            <br>
+
+            ☎️
+            <a href="tel:+576014489346">
+            +57 (601) 448 9346
+            </a>
+
+            <br>
+
+            ✉️
+            <a href="mailto:claudia.ramirez@tpfingenieria.com">
+            claudia.ramirez@tpfingenieria.com
+            </a>
+
+            <br>
+
+            📍 Calle 98 No. 21 - 50, Piso 3<br>
+            Bogotá, Colombia
+
+            <br>
+
+            🌐
+            <a href="https://www.tpfingenieria.com">
+            www.tpfingenieria.com
+            </a>
+
+        </div>
+
+        <a
+        class="button primary"
+        href="Claudia_Ramirez.vcf"
+        download>
+        👤 Guardar contacto
+        </a>
+
+        <a
+        class="button whatsapp"
+        href="https://wa.me/573180814500">
+        WhatsApp
+        </a>
+
+        <a
+        class="button secondary"
+        href="tel:+573180814500">
+        Llamar
+        </a>
+
+        <a
+        class="button secondary"
+        href="mailto:claudia.ramirez@tpfingenieria.com">
+        Enviar correo
+        </a>
+
+        <div class="qr-section">
+
+            <h3>Escanea para guardar mi contacto</h3>
+
+            <img
+            src="qr-contacto.png"
+            class="qr"
+            alt="Código QR del contacto">
+
+        </div>
+
+        <div class="footer">
+            TPF INGENIERÍA Colombia
+            <br>
+            www.tpfingenieria.com
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+
+</script>
+
+</body>
+</html>
